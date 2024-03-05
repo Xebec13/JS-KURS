@@ -10,3 +10,14 @@ if (temp <= 0) {
 } else {
     console.log("Upał");
 }
+
+
+let a = 10;
+let b = a;
+
+console.log("a", a);
+console.log("b", b);
+
+
+let obj = {a:10}
+let data = obj;
