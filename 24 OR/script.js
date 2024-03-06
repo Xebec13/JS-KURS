@@ -7,3 +7,13 @@
 #6 true
 #7 false 
 */
+
+
+let a  = 15;
+let b = 10;
+
+if (a == 15 && b == 10) {
+    console.log("Działa");
+} else {
+    console.log("Nie działa");
+}
