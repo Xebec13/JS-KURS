@@ -18,7 +18,7 @@ function findNeedle(haystack) {
     const index = haystack.indexOf("needle");
     if (index !== -1) {
         return "found the needle at position " + index;
-    }else {
+    } else {
         return "needle not found in the haystack"
     }
 }
@@ -26,31 +26,31 @@ function findNeedle(haystack) {
 console.log(findNeedle(arryNeedle));
 
 //---------------------------------------------------------
-function basicOp(operation,value1,value2){
-    if (operation == "number" 
-    || operation == 0) {
+function basicOp(operation, value1, value2) {
+    if (operation == "number"
+        || operation == 0) {
         return `Bład`;
-    }else if(operation == "+"){
+    } else if (operation == "+") {
         return value1 + value2;
-    }else if(operation == "-") {
+    } else if (operation == "-") {
         return value1 - value2;
-    }else if (operation == "*") {
+    } else if (operation == "*") {
         return value1 * value2;
-    }else if (operation == "/") {
+    } else if (operation == "/") {
         return value1 / value2;
     }
 }
 
-console.log(basicOp("+",4,6));
-console.log(basicOp("*",4,6));
-console.log(basicOp("/",14,6));
-console.log(basicOp("*",44,6));
-console.log(basicOp("-",47,76));
-console.log(basicOp("/",104,67));
-console.log(basicOp("*",4,6));
+console.log(basicOp("+", 4, 6));
+console.log(basicOp("*", 4, 6));
+console.log(basicOp("/", 14, 6));
+console.log(basicOp("*", 44, 6));
+console.log(basicOp("-", 47, 76));
+console.log(basicOp("/", 104, 67));
+console.log(basicOp("*", 4, 6));
 
 
-function basicOp1(operation,value1,value2){
+function basicOp1(operation, value1, value2) {
     switch (operation) {
         case "+":
             return value1 + value2;
@@ -66,10 +66,10 @@ function basicOp1(operation,value1,value2){
 }
 
 //-------------------------------------------------------
-function simpleMultiplication(number){
-    if(number % 2 == 0){
+function simpleMultiplication(number) {
+    if (number % 2 == 0) {
         return number * 8
-    }else {
+    } else {
         return number * 9
     }
 }
@@ -80,13 +80,27 @@ console.log(simpleMultiplication(8));
 
 
 //--------------------------------------
-const squareArray = [1,2,2]
-console.log(squareArray.map(item => (item**2)+ item));
+const squareArray = [1, 2, 2]
+console.log(squareArray.map(item => (item ** 2) + item));
 //---------------------------------------------------
 
-function squareSum(numbers){
-    return numbers.reduce((sum,num) => sum + num * num)
+function squareSum(numbers) {
+    return numbers.reduce((sum, num) => sum + num * num)
 }
 
 
-console.log(squareSum([1,2,2]));
+console.log(squareSum([1, 2, 2]));
+//-------------------------------------------------------
+
+const sheepArr = [true, true, true, false,
+    true, true, true, true,
+    true, false, true, false,
+    true, false, false, true,
+    true, true, true, true,
+    false, false, true, true]
+
+function countSheeps(sheepArr) {
+    return sheepArr.filter(isPresent => isPresent).length;
+}
+const numberOfSheep = countSheeps(sheepArr)
+console.log(`Numbers of sheep ${numberOfSheep}`);
